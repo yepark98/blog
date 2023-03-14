@@ -25,7 +25,9 @@ const Comment = () => {
     fetchData().then((res) => {
       setFeedComments(res);
     });
-  }, [feedComments]);
+  }, []);
+
+  console.log(feedComments);
 
   return (
     <section className={styles.comment}>

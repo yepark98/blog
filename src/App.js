@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import HeaderArea from "./components/HeaderArea";
-import MainPage from "./components/MainPage";
+import MainPage from "./components/main/MainPage";
 import LoginPage from "./components/login/LoginPage";
 import SignupPage from "./components/signup/SignupPage";
 import CreatePage from "./components/create/CreatePage";
