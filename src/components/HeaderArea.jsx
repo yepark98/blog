@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const HeaderArea = () => {
+  const [login, setLogin] = useState(false);
+
   return (
     <Header>
       <Inner>
@@ -10,7 +12,11 @@ const HeaderArea = () => {
           <Link to={"/"}>Blog</Link>
         </Title>
         <LoginTitle>
-          <Link to={"login"}>로그인</Link>
+          {login ? (
+            <Link to={"/"}>로그아웃</Link>
+          ) : (
+            <Link to={"login"}>로그인</Link>
+          )}
         </LoginTitle>
       </Inner>
     </Header>
@@ -29,8 +35,8 @@ const Inner = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 20px 0;
-  width: 1020px;
+  padding: 20px;
+  max-width: 1020px;
   height: 24px;
   list-style: none;
 `;

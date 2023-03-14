@@ -1,0 +1,64 @@
+.container {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 100px 0 50px;
+  color: #a1c4fd;
+}
+
+.Input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input:last-child {
+  margin-top: 20px;
+}
+
+.button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #a9cdfc;
+  cursor: pointer;
+}
+
+.signup {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.signupLink {
+  margin-top: 10px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #8f8d8d;
+}
+
+.divider {
+  display: flex;
+  margin: 15px auto;
+  max-width: 380px;
+  align-items: center;
+  font-size: 12px;
+  color: #c0c0c0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  margin: 0 15px;
+  height: 0.5px;
+  flex-grow: 1;
+  background-color: #c0c0c0;
+}
