@@ -1,9 +1,14 @@
 {
   "posts": [
     {
-      "title": "qwe",
-      "content": "qwe",
+      "title": "123",
+      "content": "123",
       "id": 1
+    },
+    {
+      "title": "ㅁㄴ",
+      "content": "ㅁㄴ",
+      "id": 2
     }
   ]
 }

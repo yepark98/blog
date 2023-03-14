@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import styles from "./SearchBar.module.css";
 import { BiSearch } from "react-icons/bi";
 
-const SearchBar = () => {
-  const [login, setLogin] = useState(true);
+const SearchBar = (props) => {
+  const { text, handleFilterItem } = props;
 
-  const handleChangeText = () => {};
+  const [login, setLogin] = useState(true);
 
   return (
     <div className={styles.container}>
@@ -16,7 +16,8 @@ const SearchBar = () => {
           type="text"
           placeholder="검색"
           className={styles.input}
-          onChange={handleChangeText}
+          value={text}
+          onChange={(e) => handleFilterItem(e.target.value)}
         />
       </div>
       {login && (
