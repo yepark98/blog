@@ -5,6 +5,7 @@ import HeaderArea from "./components/HeaderArea";
 import MainPage from "./components/MainPage";
 import LoginPage from "./components/login/LoginPage";
 import SignupPage from "./components/signup/SignupPage";
+import CreatePage from "./components/create/CreatePage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="signup" element={<SignupPage />} />
+        <Route path="create" element={<CreatePage />} />
       </Routes>
     </BrowserRouter>
   );

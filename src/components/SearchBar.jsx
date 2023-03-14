@@ -4,7 +4,7 @@ import styles from "./SearchBar.module.css";
 import { BiSearch } from "react-icons/bi";
 
 const SearchBar = () => {
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(true);
 
   const handleChangeText = () => {};
 
