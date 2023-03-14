@@ -1,10 +1,17 @@
 import React from "react";
+import styles from "./MainPage.module.css";
+
+import SearchBar from "./SearchBar";
+import ListItem from "./ListItem";
 
 const MainPage = () => {
   return (
-    <div>
-      <h1>MainPage</h1>
-    </div>
+    <section className={styles.container}>
+      <SearchBar />
+      <ul className={styles.list}>
+        <ListItem />
+      </ul>
+    </section>
   );
 };
 

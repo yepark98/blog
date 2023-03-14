@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 50px;
+  padding: 0 10px;
+  max-width: 1000px;
+}
+
+.searchIcon {
+  cursor: pointer;
+  color: #c0c0c0;
+}
+
+.input {
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.button {
+  padding: 0 10px;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  background-color: #a9cdfc;
+}

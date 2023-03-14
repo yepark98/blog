@@ -1,0 +1,11 @@
+.container {
+  margin-top: 80px;
+}
+
+.list {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-height: 400px;
+  list-style: none;
+}
