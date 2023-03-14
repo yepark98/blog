@@ -24,8 +24,6 @@ const CreatePage = () => {
     navigate("/");
   };
 
-  console.log(text);
-
   return (
     <section className={styles.container}>
       <form onSubmit={handleSubmit}>

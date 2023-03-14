@@ -18,14 +18,22 @@ const MainPage = () => {
     });
   }, []);
 
+  console.log(posts.length);
+
   return (
     <section className={styles.container}>
       <SearchBar />
-      <ul className={styles.list}>
-        {posts.map((post) => (
-          <ListItem key={post.id} post={post} />
-        ))}
-      </ul>
+      {posts.length === 0 ? (
+        <div className={styles.textArea}>
+          <p className={styles.text}>아직 작성된 포스트가 없습니다.</p>
+        </div>
+      ) : (
+        <ul className={styles.list}>
+          {posts.map((post) => (
+            <ListItem key={post.id} post={post} id={post.id} />
+          ))}
+        </ul>
+      )}
     </section>
   );
 };
