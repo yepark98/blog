@@ -4,8 +4,11 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import cx from "clsx";
 
+import Comment from "./Comment";
+
 const DetailPage = () => {
   const [posts, setPosts] = useState([]);
+  const [login, setLogin] = useState(true);
 
   const params = useParams();
   const navigate = useNavigate();
@@ -29,23 +32,31 @@ const DetailPage = () => {
     return setPosts(response.data);
   };
 
-  console.log(posts.length);
-
   return (
     <section className={styles.container}>
-      <div className={styles.buttonAear}>
-        <button type="button" className={cx(styles.button, styles.editButton)}>
-          글 수정
-        </button>
-        <button type="button" className={styles.button} onClick={handleRemove}>
-          글 삭제
-        </button>
-      </div>
+      {login && (
+        <div className={styles.buttonAear}>
+          <button
+            type="button"
+            className={cx(styles.button, styles.editButton)}
+          >
+            글 수정
+          </button>
+          <button
+            type="button"
+            className={styles.button}
+            onClick={handleRemove}
+          >
+            글 삭제
+          </button>
+        </div>
+      )}
       <div className={styles.titleArea}>
         <h3 className={styles.title}>{posts.title}</h3>
         <hr className={styles.divider} />
         <p className={styles.content}>{posts.content}</p>
       </div>
+      <Comment />
     </section>
   );
 };
